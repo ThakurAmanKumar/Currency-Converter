@@ -20,6 +20,10 @@ A **real-time currency converter** built using Python and Tkinter. This tool all
 ### Currency Converter UI  
 ![Currency Converter Screenshot](https://github.com/ThakurAmanKumar/Currency-Converter/blob/main/img/Screenshot%202025-03-13%20183636.png)  
 
+## 📜 License
+This project is licensed under the **MIT License**.  
+See the full license [here](https://github.com/ThakurAmanKumar/License/blob/main/LICENSE).
+
 ## 📂 Installation  
 Follow these steps to run the Currency Converter on your local machine:  
 
