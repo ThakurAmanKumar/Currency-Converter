@@ -2,9 +2,6 @@
 
 A **real-time currency converter** built using Python and Tkinter. This tool allows users to convert between multiple currencies with live exchange rates, offering a user-friendly experience.  
 
-## 🔗 Live Demo  
-(Not hosted yet)  
-
 ## 🚀 Features  
 ✅ **Real-time exchange rates** fetched from an API  
 ✅ Supports **50+ international currencies**  
