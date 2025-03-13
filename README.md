@@ -18,7 +18,7 @@ A **real-time currency converter** built using Python and Tkinter. This tool all
 
 ## 📷 Screenshot  
 ### Currency Converter UI  
-![Currency Converter Screenshot](https://raw.githubusercontent.com/ThakurAmanKumar/Currency-Converter/main/Screenshot/UI.png)  
+![Currency Converter Screenshot](https://github.com/ThakurAmanKumar/Currency-Converter/blob/main/img/Screenshot%202025-03-13%20183636.png)  
 
 ## 📂 Installation  
 Follow these steps to run the Currency Converter on your local machine:  
