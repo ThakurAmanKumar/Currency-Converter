@@ -4,8 +4,7 @@ from tkinter import ttk, messagebox
 import threading
 import os  # For environment variables
 
-# Secure API Key Management
-API_KEY = os.getenv("EXCHANGE_API_KEY", "1c5204c15afd29ec96d69b35")  # Replace with env var
+API_KEY = os.getenv("EXCHANGE_API_KEY", "1c5204c15afd29ec96d69b35")  
 BASE_API_URL = f"https://v6.exchangerate-api.com/v6/1c5204c15afd29ec96d69b35/pair"
 
 class CurrencyConverterApp:
@@ -16,7 +15,6 @@ class CurrencyConverterApp:
         self.root.resizable(False, False)
         self.root.configure(bg="#282c34")  # Dark mode background
 
-        # Custom styling
         self.style = ttk.Style()
         self.style.theme_use('clam')
         self.style.configure('TLabel', font=('Helvetica', 14), background="#282c34", foreground="white")
@@ -24,7 +22,6 @@ class CurrencyConverterApp:
         self.style.configure('Result.TLabel', font=('Helvetica', 16, 'bold'), background="#374151", foreground="#ffcc00")
         self.style.configure('TButton', font=('Helvetica', 14, 'bold'), background="#00d4ff", foreground="black")
 
-        # Currency list with full names
         self.currencies = {
             "AED": "United Arab Emirates Dirham", "AFN": "Afghan Afghani", "ALL": "Albanian Lek",
             "AMD": "Armenian Dram", "ANG": "Netherlands Antillean Guilder", "AOA": "Angolan Kwanza",
@@ -48,7 +45,6 @@ class CurrencyConverterApp:
             "VND": "Vietnamese Đồng", "ZAR": "South African Rand"
         }
 
-        # UI Elements
         self.create_widgets()
 
     def create_widgets(self):
@@ -57,7 +53,6 @@ class CurrencyConverterApp:
         frame = tk.Frame(self.root, bg="#282c34")
         frame.pack(pady=10)
 
-        # From Currency ComboBox (Centered)
         ttk.Label(frame, text="From:", font=("Helvetica", 14, "bold")).grid(row=0, column=0, padx=10, pady=5, sticky="w")
         self.from_currency_var = tk.StringVar()
         self.from_currency = ttk.Combobox(frame, textvariable=self.from_currency_var, font=('Helvetica', 14), state="readonly", width=25)
@@ -65,7 +60,6 @@ class CurrencyConverterApp:
         self.from_currency.current(0)
         self.from_currency.grid(row=0, column=1, padx=10, pady=5)
 
-        # To Currency ComboBox (Centered)
         ttk.Label(frame, text="To:", font=("Helvetica", 14, "bold")).grid(row=1, column=0, padx=10, pady=5, sticky="w")
         self.to_currency_var = tk.StringVar()
         self.to_currency = ttk.Combobox(frame, textvariable=self.to_currency_var, font=('Helvetica', 14), state="readonly", width=25)
@@ -73,7 +67,6 @@ class CurrencyConverterApp:
         self.to_currency.current(5)
         self.to_currency.grid(row=1, column=1, padx=10, pady=5)
 
-        # Amount Entry (Centered)
         ttk.Label(self.root, text="Amount:", font=("Helvetica", 14, "bold")).pack(pady=5)
         self.amount_var = tk.StringVar()
         self.amount_entry = ttk.Entry(self.root, font=('Helvetica', 16), justify="center", textvariable=self.amount_var, width=15)
@@ -81,11 +74,9 @@ class CurrencyConverterApp:
         self.amount_var.trace_add("write", self.validate_number_input)
         self.amount_entry.insert(0, "1")
 
-        # Convert Button (Centered)
         self.convert_button = ttk.Button(self.root, text="Convert", command=self.convert_currency)
         self.convert_button.pack(pady=10)
 
-        # Result Label (Larger Font, More Visibility)
         self.result_label = ttk.Label(self.root, text="1.0 USD = 139.62 NPR", style="Result.TLabel")
         self.result_label.pack(pady=15)
 
@@ -130,7 +121,6 @@ class CurrencyConverterApp:
         except Exception as e:
             messagebox.showerror("Error", str(e))
 
-# Run the application
 if __name__ == "__main__":
     root = tk.Tk()
     app = CurrencyConverterApp(root)
