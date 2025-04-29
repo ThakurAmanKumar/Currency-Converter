@@ -27,7 +27,20 @@ See the full license [here](https://github.com/ThakurAmanKumar/License/blob/main
 ## 📂 Installation  
 Follow these steps to run the Currency Converter on your local machine:  
 
-1. **Clone the repository:**  
-   ```sh
-   git clone https://github.com/ThakurAmanKumar/Currency-Converter.git
-   cd Currency-Converter
+### Steps
+
+```bash
+# Clone the repository
+https://github.com/ThakurAmanKumar/Currency-Converter.git
+
+# Navigate into the project directory
+cd Currency-Converter
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the Flask app
+python app.py
+```
+
+Visit `http://127.0.0.1:5000/` in your browser.
