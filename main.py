@@ -13,7 +13,7 @@ class CurrencyConverterApp:
         self.root.title("Currency Converter")
         self.root.geometry("600x500")
         self.root.resizable(False, False)
-        self.root.configure(bg="#282c34")  # Dark mode background
+        self.root.configure(bg="#282c34")  
 
         self.style = ttk.Style()
         self.style.theme_use('clam')
@@ -85,9 +85,9 @@ class CurrencyConverterApp:
         value = self.amount_var.get()
         try:
             if value:
-                float(value)  # Ensure it's a valid number
+                float(value)
         except ValueError:
-            self.amount_var.set(value[:-1])  # Remove last invalid character
+            self.amount_var.set(value[:-1])  
 
     def convert_currency(self):
         """Performs currency conversion."""
