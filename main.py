@@ -2,7 +2,7 @@ import requests
 import tkinter as tk
 from tkinter import ttk, messagebox
 import threading
-import os  # For environment variables
+import os 
 
 API_KEY = os.getenv("EXCHANGE_API_KEY", "1c5204c15afd29ec96d69b35")  
 BASE_API_URL = f"https://v6.exchangerate-api.com/v6/1c5204c15afd29ec96d69b35/pair"
